@@ -11,8 +11,20 @@ import {
   StyleSheet,
   Text,
   View,
-  Image
+  Image,
+  TextInput,
+  Button,
+  Alert,
+  TouchableHighlight,
+  TouchableOpacity,
+  TouchableNativeFeedback,
+  TouchableWithoutFeedback,
+  ScrollView,
+  FlatList,
+  SectionList
 } from 'react-native';
+
+import {  createStackNavigator, } from 'react-navigation';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -23,61 +35,25 @@ const instructions = Platform.select({
 
 type Props = {};
 
-
-class Greeting extends Component {
+class HomeScreen extends React.Component {
   render() {
     return (
-      <Text>Hello {this.props.name}!</Text>
-    );
-  }
-}
-
-
-export default class App extends Component<Props> {
-  render() {
-
-    let pic = {
-      uri: 'https://www.planwallpaper.com/static/images/beautiful-sunset-images-196063.jpg'
-    };
-    return (
-
-      <View style={styles.container}>
-
-        <View style={{alignItems: 'center'}}>
-          <Greeting name='Rexxar' />
-          <Greeting name='Jaina' />
-          <Greeting name='Valeera' />
-        </View>
-        <Text style={styles.welcome}>
-          All this sheet!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-        <Image source={pic} style={{width: 193, height: 110}}/>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Home Screen</Text>
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+
+
+export default class App extends React.Component {
+  render() {
+    return (
+      <View>
+        <Text>Detsddafsdfgdfgsdfeen</Text>
+
+      </View>
+    );
+  }
+}
